@@ -34,3 +34,25 @@
   flex: 1;
   height: 80rem;
 }
+
+////////////////////////////////
+////// Main part of hotel view
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+}
+
+.descreption {
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  font-size: 1.4rem;
+}
+
+.user-reviews {
+  flex: 1;
+}
