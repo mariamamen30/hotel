@@ -12,6 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 1;
+    padding: 1rem;
+    background-color: var(--color-grey-light-2);
+  }
 
   &__input {
     font-family: inherit;
@@ -122,11 +128,20 @@
   list-style: none;
   font-size: 1.4rem;
   margin-top: 3.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    // align-items: baseline;
+    margin: 0;
+  }
 
   &__item {
     padding: 0.7rem 1.5rem;
     margin-bottom: 1rem;
     position: relative;
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+      margin: 0;
+    }
 
     &::before {
       content: "";
@@ -163,9 +178,15 @@
       text-transform: uppercase;
       padding: 0.7rem 1.5rem;
       z-index: 10;
-    }
-
-    &:hover {
+      @media only screen and (max-width: $bp-medium) {
+        justify-content: center;
+      }
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        text-align: center;
+      }
     }
   }
   &__icon {
@@ -173,6 +194,10 @@
     height: 1.75rem;
     fill: currentColor;
     margin-right: 1.5rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -183,7 +208,9 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
-  //   align-self: flex-end;
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 //////////////////////////////////
@@ -208,6 +235,11 @@
     font-weight: 300;
     text-transform: uppercase;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
   }
 
   &__stars {
@@ -227,6 +259,11 @@
     height: 1.75rem;
     width: 1.75rem;
     fill: var(--color-primary);
+
+    @media only screen and (max-width: $bp-small) {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
   }
 
   &__rating {
@@ -242,9 +279,17 @@
   }
   &__rating-average {
     font-size: 1.8rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.3rem;
+    }
   }
   &__rating-count {
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -268,6 +313,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.1rem;
   }
 }
 
@@ -336,7 +385,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  &____friends {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   &__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -357,6 +409,9 @@
   margin-bottom: 3rem;
   overflow: hidden;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
   &__text {
     margin-bottom: 2rem;
     position: relative;
@@ -412,6 +467,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 1.2rem;

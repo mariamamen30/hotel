@@ -3,7 +3,11 @@
   margin: 8rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  height: 50rem;
+  min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+  }
 }
 
 .header {
@@ -15,11 +19,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 11rem;
+  }
 }
 
 .content {
   display: flex;
   align-items: stretch;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -33,7 +46,6 @@
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  height: 80rem;
 }
 
 ////////////////////////////////
@@ -44,6 +56,12 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   font-size: 1.4rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .descreption {
@@ -52,6 +70,14 @@
   background-color: #fff;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
   padding: 3rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .user-reviews {
