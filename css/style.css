@@ -67,7 +67,8 @@ body {
   align-items: center; }
 
 .content {
-  display: flex; }
+  display: flex;
+  align-items: stretch; }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -368,3 +369,50 @@ body {
     color: var(--color-grey-light-2);
     top: -9rem;
     left: 0.3rem; }
+
+.cta {
+  text-align: center;
+  padding: 3.5rem 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .cta__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 3rem; }
+
+.btn {
+  border: none;
+  border-radius: 100px;
+  padding: 1.5rem 2.5rem;
+  background-color: transparent;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-grey-light-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 5rem;
+  width: 20rem;
+  position: relative; }
+  .btn__visible {
+    position: absolute;
+    transition: all 0.2s;
+    top: -3rem; }
+  .btn__invisible {
+    position: absolute;
+    transition: all 0.2s;
+    top: 1.5rem; }
+  .btn:hover {
+    cursor: pointer; }
+    .btn:hover .btn__invisible {
+      top: 5rem; }
+    .btn:hover .btn__visible {
+      top: 1.5rem; }
+  .btn:active {
+    outline: none; }
